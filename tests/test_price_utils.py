@@ -1,5 +1,5 @@
 # test_price_utils.py
-from project.price_utils import apply_discount
+from price_utils import apply_discount
 
 def test_apply_discount():
     price = 100
