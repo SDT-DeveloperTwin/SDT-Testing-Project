@@ -1,3 +1,7 @@
-# Buggy implementation (for agent to fix)
 def apply_discount(price: float, discount_percent: float) -> float:
-    return price * (1 - discount_percent / 100)
+    if price <= 0:
+        return 0.0
+
+    discount = max(0, discount_percent)
+    final_price = price * (1 - discount / 100)
+    return round(final_price, 2)
